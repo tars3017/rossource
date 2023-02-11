@@ -1,0 +1,39 @@
+#!/usr/bin/env zsh
+
+# get rid of NULL bytes
+use_shell=$(tr -d '\0' </proc/$$/cmdline)
+# use_shell=$SHELL
+
+origin_path=$(pwd)
+now_path=$origin_path
+has_source=0
+
+
+while [ "$now_path" != "/" ]
+do
+    if [ -d "devel" ] 
+    then
+        if [ "$use_shell" = "bash" ] 
+        then
+            . "devel/setup.bash"
+            echo "Successfully source $(pwd)/devel/setup.bash"
+        elif [ "$use_shell" = "zsh" ] 
+        then
+            . "devel/setup.zsh"
+            echo "Successfully source $(pwd)/devel/setup.zsh"
+        else 
+            echo "Don't know how to use $use_shell to run. Failed"
+        fi
+        has_source=1
+        break
+    fi
+    
+    cd ..
+    now_path=$(pwd)
+done
+
+cd $origin_path
+if [ $has_source -eq 0 ]; then
+    echo "Couldn't find devel/ directory. Failed."
+    # exit 1
+fi
