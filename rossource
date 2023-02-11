@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 
 # get rid of NULL bytes
 use_shell=$(tr -d '\0' </proc/$$/cmdline)
