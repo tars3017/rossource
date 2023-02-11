@@ -17,16 +17,24 @@ run ```. rossource``` in terminal
 1. 手動安裝
     1. 下載 rossource 這個檔案到你想儲存的地方
     2. 把該路徑加到 PATH 中，然後存在 .bashrc 或 .zshrc
-2. 自動安裝
+2. 自動安裝(安裝在 $HOME 下)
     直接執行以下指令
     ```
     git clone https://github.com/tars3017/ros_auto_source.git
     cd ~
     cp ros_auto_source/rossource .
+    rm -r ~/ros_auto_source
     ```
 
     - bash
-    ```echo 'export PATH=$HOME:$PATH' >> ~/.bashrc```
+    ```
+    echo 'export PATH=$HOME:$PATH' >> ~/.bashrc
+    source ~/.bashrc
+    ```
 
     - zsh
-    ```echo 'export PATH=$HOME:$PATH' >> ~/.zshrc```
+    ```
+    echo 'export PATH=$HOME:$PATH' >> ~/.zshrc
+    source ~/.zshrc
+    ```
+    
