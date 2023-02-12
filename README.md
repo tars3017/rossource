@@ -1,6 +1,6 @@
 # ros_auto_source
 ## Purpose 工具目的
-In any directories under a ROS package, it will help you find devel/setup.bash
+In any directories under a ROS workspace, it will help you find devel/setup.bash
 and source it for you.
 
 每次要跑 ROS 之前都要先```source devel/setup.bash```(或者```setup.zsh```)，
