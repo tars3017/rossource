@@ -17,7 +17,7 @@ You can also run ```cd -``` after using rossource to switch to the root of the w
     Run the commands below, it will download the file to your HOME.
     ```
     cd ~
-    git clone https://github.com/tars3017/ros_auto_source.git
+    git clone https://github.com/tars3017/rossource.git
     cp rossource/rossource .
     rm -r ~/rossource
     ```
