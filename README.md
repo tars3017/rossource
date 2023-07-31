@@ -14,23 +14,22 @@ You can also run ```cd -``` after using rossource to switch to the root of the w
     1. Download the rossource file to the place you want to store.
     2. Add that path to your $PATH varibale.
 2. Automatic
+
     Run the commands below, it will download the file to your HOME.
     ```
     cd ~
     git clone https://github.com/tars3017/rossource.git
-    cp rossource/rossource .
-    rm -r ~/rossource
     ```
 
     - bash
     ```
-    echo 'export PATH=$HOME:$PATH' >> ~/.bashrc
+    echo 'export PATH=$HOME/rossource:$PATH' >> ~/.bashrc
     source ~/.bashrc
     ```
 
     - zsh
     ```
-    echo 'export PATH=$HOME:$PATH' >> ~/.zshrc
+    echo 'export PATH=$HOME/rossource:$PATH' >> ~/.zshrc
     source ~/.zshrc
     ```
     
